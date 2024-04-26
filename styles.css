@@ -86,3 +86,12 @@ body {
 #newSize:focus {
     outline: 0.2em solid var(--text);
 }
+
+.button:hover {
+    border-color: var(--text-hl);
+    color: var(--text-hl);
+}
+
+.button:focus:hover {
+    outline-color: var(--text-hl);
+}
