@@ -35,3 +35,15 @@ invert.addEventListener("click", () => {
         }
     });
 });
+
+const newSize = document.querySelector("#newSize");
+const resize = document.querySelector(".resize");
+resize.addEventListener("click", () => {
+    let input = parseInt(newSize.value.trim());
+    if (typeof(input) != "number" || isNaN(input) || input < 1) {
+        alert("Invalid input!");
+    }
+    else {
+        generateCanvas(input);
+    }
+});
