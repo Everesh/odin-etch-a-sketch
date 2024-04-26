@@ -1,12 +1,19 @@
 const canvas = document.querySelector("#canvas");
-for (let x = 0; x < 50 * 50; x++){
-    const pixel = document.createElement("div");
-    pixel.classList.add("pixel");
-    canvas.appendChild(pixel);
-    pixel.addEventListener("mouseover", () => {
-        pixel.classList.add("colored");
-    });
-}
+
+function generateCanvas (num) {
+    canvas.textContent = "";
+    for (let x = 0; x < num * num; x++){
+        const pixel = document.createElement("div");
+        pixel.classList.add("pixel");
+        canvas.appendChild(pixel);
+        pixel.addEventListener("mouseover", () => {
+            pixel.classList.add("colored");
+        });
+    };
+    document.documentElement.style.setProperty("--pixel-size", `${64/num}em`);
+};
+
+generateCanvas(64);
 
 const reset = document.querySelector(".reset");
 reset.addEventListener("click", () => {
