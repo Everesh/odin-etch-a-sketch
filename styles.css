@@ -1,0 +1,50 @@
+:root {
+    --text: #e1dbd0;
+    --text-hl: #ec8a6a;
+
+    --surface-0: #111;
+    --surface-1: #222;
+    --surface-2: #252525;
+    --surface-3: #333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+
+    background-color: var(--surface-1);
+    color: var(--text);
+}
+
+.content {
+    flex: 0 0 52em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: var(--surface-2);
+}
+
+.content > * {
+    margin: 1em;
+}
+
+.button {
+    width: 10em;
+    height: 3em;
+    color: var(--text);
+    background-color: var(--surface-1);
+    border: 0.2em solid var(--text);
+    border-radius: 1em;
+}
+
+.pixel {
+    width: 1em;
+    height: 1em;
+}
