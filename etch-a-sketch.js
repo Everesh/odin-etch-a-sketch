@@ -40,8 +40,11 @@ const newSize = document.querySelector("#newSize");
 const resize = document.querySelector(".resize");
 resize.addEventListener("click", () => {
     let input = parseInt(newSize.value.trim());
-    if (typeof(input) != "number" || isNaN(input) || input < 1) {
+    if (typeof(input) != "number" || isNaN(input)) {
         alert("Invalid input!");
+    }
+    else if (input > 100 || input < 1) {
+        alert("Whoa there buddy. Keep it 0-100!")
     }
     else {
         generateCanvas(input);
