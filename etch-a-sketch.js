@@ -7,3 +7,11 @@ for (let x = 0; x < 50 * 50; x++){
         pixel.classList.add("colored");
     });
 }
+
+const reset = document.querySelector(".reset");
+reset.addEventListener("click", () => {
+    const pixels = document.querySelectorAll(".pixel");
+    pixels.forEach( function(pixel) {
+        pixel.classList.remove("colored");
+    });
+});
