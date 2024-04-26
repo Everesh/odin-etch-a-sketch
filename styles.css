@@ -35,6 +35,13 @@ body {
     margin: 1em;
 }
 
+#canvas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
 .button {
     width: 10em;
     height: 3em;
@@ -47,4 +54,6 @@ body {
 .pixel {
     width: 1em;
     height: 1em;
+    border: 1px solid var(--surface-3);
+    background-color: var(--text);
 }
