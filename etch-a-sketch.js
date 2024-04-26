@@ -15,3 +15,16 @@ reset.addEventListener("click", () => {
         pixel.classList.remove("colored");
     });
 });
+
+const invert = document.querySelector(".invert");
+invert.addEventListener("click", () => {
+    const pixels = document.querySelectorAll(".pixel");
+    pixels.forEach( function(pixel) {
+        if (pixel.classList.contains("colored")) {
+            pixel.classList.remove("colored");
+        }
+        else {
+            pixel.classList.add("colored");
+        }
+    });
+});
