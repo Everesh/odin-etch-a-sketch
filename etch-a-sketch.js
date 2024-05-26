@@ -10,7 +10,7 @@ function generateCanvas (num) {
             pixel.classList.add("colored");
         });
     };
-    document.documentElement.style.setProperty("--pixel-size", `${64/num}em`);
+    document.documentElement.style.setProperty("--pixel-size", `${64 / (num + 0.5) }em`);
 };
 
 generateCanvas(64);
